@@ -7,7 +7,7 @@
                 bool flag = true;
                 while (flag)
                 {
-                Console.WriteLine("\n\n Select Your Choice \n 1.PushElement\n 2.PeakElement\n 3.PopElement\n 4.InsertElementInQueue ");
+                Console.WriteLine("\n\n Select Your Choice \n 1.PushElement\n 2.PeakElement\n 3.PopElement\n 4.InsertElementInQueue\n 5.DeleteElement in Queue ");
                 int option = Convert.ToInt32(Console.ReadLine());
                     switch (option)
                     {
@@ -39,7 +39,14 @@
                         listQueue.Enqueue(56);
                         listQueue.Enqueue(30);
                         listQueue.Enqueue(70);
-                        Console.WriteLine("----------------------------------\n");
+                        break;
+                    case 5:
+                        Queue queue = new Queue();
+                        queue.Enqueue(56);
+                        queue.Enqueue(30);
+                        queue.Enqueue(70);
+                        queue.Dequeue();
+                        queue.Display();
                         break;
                     default:
                         Console.WriteLine("Invalid Choice");
